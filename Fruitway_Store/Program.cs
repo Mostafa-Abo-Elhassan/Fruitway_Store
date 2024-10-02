@@ -1,3 +1,8 @@
+using Fruitway_Store.Data;
+using Fruitway_Store.Repository.IRepo;
+using Fruitway_Store.Repository.Repo;
+using Microsoft.EntityFrameworkCore;
+
 namespace Fruitway_Store
 {
     public class Program
@@ -9,7 +14,12 @@ namespace Fruitway_Store
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            var app = builder.Build();
+            builder.Services.AddDbContext<ApplicationDbcontext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("Fruitway")));
+            builder.Services.AddScoped<IProductRepo,ProductRepo>();
+			builder.Services.AddScoped<IAdminProduct, AdminProductRepo>();
+
+			var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

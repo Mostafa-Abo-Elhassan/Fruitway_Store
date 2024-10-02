@@ -1,0 +1,709 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Fruitway_Store.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Fruitway_Store.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\bootstrap\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\animate.css",
+      "PackagePath": "staticwebassets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\meanmenu.min.css",
+      "PackagePath": "staticwebassets\\css\\meanmenu.min.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\css\\responsive.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\base\\_mixins.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\base\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\base\\_typography.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\base\\_typography.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\base\\_variables.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\base\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\common\\_common.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\common\\_common.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\common\\_footer.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\common\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\common\\_header.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\common\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\common\\_hover.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\common\\_hover.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\main.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\main.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\pages\\_404.css",
+      "PackagePath": "staticwebassets\\css\\scss\\pages\\_404.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\pages\\_404.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\pages\\_404.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\pages\\_about.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\pages\\_about.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\pages\\_contact.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\pages\\_contact.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\pages\\_shop.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\pages\\_shop.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\prepros-6.config",
+      "PackagePath": "staticwebassets\\css\\scss\\prepros-6.config"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\sections\\_about.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\sections\\_about.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\sections\\_cart-banner.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\sections\\_cart-banner.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\sections\\_hero.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\sections\\_hero.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\sections\\_list.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\sections\\_list.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\sections\\_news.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\sections\\_news.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\sections\\_shop-banner.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\sections\\_shop-banner.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\scss\\sections\\_testimonials.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\sections\\_testimonials.scss"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\a.jpg",
+      "PackagePath": "staticwebassets\\img\\a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\abt.jpg",
+      "PackagePath": "staticwebassets\\img\\abt.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\avaters\\avatar1.png",
+      "PackagePath": "staticwebassets\\img\\avaters\\avatar1.png"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\avaters\\avatar2.png",
+      "PackagePath": "staticwebassets\\img\\avaters\\avatar2.png"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\avaters\\avatar3.png",
+      "PackagePath": "staticwebassets\\img\\avaters\\avatar3.png"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\breadcrumb-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\breadcrumb-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\company-logos\\1.png",
+      "PackagePath": "staticwebassets\\img\\company-logos\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\company-logos\\2.png",
+      "PackagePath": "staticwebassets\\img\\company-logos\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\company-logos\\3.png",
+      "PackagePath": "staticwebassets\\img\\company-logos\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\company-logos\\4.png",
+      "PackagePath": "staticwebassets\\img\\company-logos\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\company-logos\\5.png",
+      "PackagePath": "staticwebassets\\img\\company-logos\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\dd.jpg",
+      "PackagePath": "staticwebassets\\img\\dd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\img\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\feature-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\feature-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\hero-bg-2.jpg",
+      "PackagePath": "staticwebassets\\img\\hero-bg-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\hero-bg-3.jpg",
+      "PackagePath": "staticwebassets\\img\\hero-bg-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\hero-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\hero-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\homepage-bg-pattern.png",
+      "PackagePath": "staticwebassets\\img\\homepage-bg-pattern.png"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\latest-news\\news-bg-1.jpg",
+      "PackagePath": "staticwebassets\\img\\latest-news\\news-bg-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\latest-news\\news-bg-2.jpg",
+      "PackagePath": "staticwebassets\\img\\latest-news\\news-bg-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\latest-news\\news-bg-3.jpg",
+      "PackagePath": "staticwebassets\\img\\latest-news\\news-bg-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\latest-news\\news-bg-4.jpg",
+      "PackagePath": "staticwebassets\\img\\latest-news\\news-bg-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\latest-news\\news-bg-5.jpg",
+      "PackagePath": "staticwebassets\\img\\latest-news\\news-bg-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\latest-news\\news-bg-6.jpg",
+      "PackagePath": "staticwebassets\\img\\latest-news\\news-bg-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\products\\product-img-1.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\product-img-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\products\\product-img-2.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\product-img-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\products\\product-img-3.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\product-img-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\products\\product-img-4.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\product-img-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\products\\product-img-5.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\product-img-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\products\\product-img-6.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\product-img-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\team\\team-1.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\team-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\team\\team-2.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\team-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\img\\team\\team-3.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\team-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\js\\form-validate.js",
+      "PackagePath": "staticwebassets\\js\\form-validate.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\js\\jquery-1.11.3.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-1.11.3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\js\\jquery.countdown.js",
+      "PackagePath": "staticwebassets\\js\\jquery.countdown.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\js\\jquery.isotope-3.0.6.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.isotope-3.0.6.min.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\js\\jquery.meanmenu.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.meanmenu.min.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\js\\sticker.js",
+      "PackagePath": "staticwebassets\\js\\sticker.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\js\\waypoints.js",
+      "PackagePath": "staticwebassets\\js\\waypoints.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-brands-400.eot_",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.eot_"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-regular-400.eot_",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.eot_"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-solid-900.eot_",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.eot_"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\wwwroot\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Fruitway_Store.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Fruitway_Store.props",
+      "PackagePath": "build\\Fruitway_Store.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Fruitway_Store.props",
+      "PackagePath": "buildMultiTargeting\\Fruitway_Store.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Fruitway_Store.props",
+      "PackagePath": "buildTransitive\\Fruitway_Store.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

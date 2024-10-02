@@ -1,0 +1,46 @@
+﻿@model Fruitway_Store.Models.ViewModels.AddProductVM
+@{
+    ViewData["Title"] = "Add product";
+}
+
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Admin Role</p>
+                    <h1>Add product</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <form method="post" asp-controller="AdminProduct" asp-action="SaveAdd">
+        <div class="mb-3">
+            <label class="form-label" for="name">Name of Product:</label>
+            <input class="form-control" type="text" id="name" asp-for="Name">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="details">Details:</label>
+            <input class="form-control" type="text" id="details" asp-for="Detail">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="price">Price:</label>
+            <input class="form-control" type="number" id="price" asp-for="Price">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="imageUrl">URL Image:</label>
+            <input class="form-control" type="text" id="imageUrl" asp-for="ImageUrl">
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-dark">Add Product</button>
+        </div>
+    </form>
+</div>

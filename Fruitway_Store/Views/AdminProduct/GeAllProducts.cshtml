@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "Get ALL products";
+
+}
+
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Admin Role</p>
+                    <h1>All Products</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb section -->
+@* <br />
+<br /> *@
+
+<div>
+    @if (Model != null && Model.Any())
+    {
+        <div class="container py-5" >
+            <div class="container m-5">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Detail</th>
+                        <th>price</th>
+                        <th>Image  </th>
+                        <th> Edit </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var blogPost in Model)
+                    {
+                        <tr>
+                            <td>@blogPost.Id</td>
+                            <td>@blogPost.Name</td>
+                            <td>@blogPost.Price</td>
+                            <td>@blogPost.Detail</td>
+                            <th>
+                                <img src="@blogPost.ImageUrl" class="img-thumbnail " style="width:64px; height:64px;" />
+                            </th>
+                            <td>
+                                <button type="submit" class="btn btn-dark"
+                                            asp-area="" asp-controller="AdminProduct"
+                                        asp-action="Edit" asp-route-id="@blogPost.Id">
+                                    <a asp-area="" asp-controller="AdminProduct"
+                                       asp-action="Edit" asp-route-id="@blogPost.Id">
+                                        Edit
+                                    </a>
+                                </button>
+                            </td>
+                                <td>
+                                    <button type="submit" class="btn btn-danger"
+                                            asp-area="" asp-controller="AdminProduct"
+                                            asp-action="Delete" asp-route-id="@blogPost.Id">
+                                        <a asp-area="" asp-controller="AdminProduct"
+                                           asp-action="Delete" asp-route-id="@blogPost.Id">
+                                            Delete
+                                        </a>
+                                    </button>
+                                </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            </div>
+        </div>
+    }
+    else
+    {
+        <p>NO Tags Found!</p>
+    }
+    @* <style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    </style> *@
+
+
+</div>
