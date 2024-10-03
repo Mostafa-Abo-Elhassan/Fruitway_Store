@@ -18,23 +18,27 @@
 <div class="container py-5">
     <form method="post" asp-controller="AdminProduct" asp-action="SaveEdit">
         <div class="mb-3">
+            <label class="form-label" for="name">Id</label>
+            <input class="form-control" type="text" asp-for="Id" readonly>
+        </div>
+        <div class="mb-3">
             <label class="form-label" for="name">Name of Product:</label>
-            <input class="form-control" type="text" id="name" asp-for="Name">
+            <input class="form-control" type="text"  asp-for="Name">
         </div>
 
         <div class="mb-3">
             <label class="form-label" for="details">Details:</label>
-            <input class="form-control" type="text" id="details" asp-for="Detail">
+            <input class="form-control" type="text"  asp-for="Detail">
         </div>
 
         <div class="mb-3">
             <label class="form-label" for="price">Price:</label>
-            <input class="form-control" type="number" id="price" asp-for="Price">
+            <input class="form-control" type="number"  asp-for="Price">
         </div>
 
         <div class="mb-3">
             <label class="form-label" for="imageUrl">URL Image:</label>
-            <input class="form-control" type="text" id="imageUrl" asp-for="ImageUrl">
+            <input class="form-control" type="text"  asp-for="ImageUrl">
         </div>
 
         <div class="mb-3">

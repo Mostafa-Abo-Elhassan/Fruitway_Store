@@ -10,9 +10,7 @@ namespace Fruitway_Store.Repository.IRepo
 		Product? GetProductByName(string Name);
 
 		Product AddProduct(Product product);
-		Product? UpdateProduct(Product product);
-
-		Product? Delete(int Id);
-        object UpdateProduct(AddProductVM uPDATED);
+		
+       
     }
 }

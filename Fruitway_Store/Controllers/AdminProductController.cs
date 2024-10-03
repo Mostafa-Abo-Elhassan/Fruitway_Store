@@ -1,8 +1,10 @@
 ﻿using Azure;
+using Fruitway_Store.Data;
 using Fruitway_Store.Models.Entities;
 using Fruitway_Store.Models.ViewModels;
 using Fruitway_Store.Repository.IRepo;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Fruitway_Store.Controllers
@@ -10,11 +12,14 @@ namespace Fruitway_Store.Controllers
 	public class AdminProductController : Controller
 	{
 		private readonly IAdminProduct adminProduct;
+        private readonly ApplicationDbcontext dbcontext;
 
-		public AdminProductController(IAdminProduct adminProduct)
+        public AdminProductController(IAdminProduct adminProduct , ApplicationDbcontext dbcontext)
         {
 			this.adminProduct = adminProduct;
-		}
+            this.dbcontext = dbcontext;
+        }
+
         public IActionResult GeAllProducts()
 		{
 			var all = adminProduct.GetAllProducts();
@@ -63,51 +68,89 @@ namespace Fruitway_Store.Controllers
                 return View(Evm);
             }
 			return NotFound();
-
-
-
-          
+       
 		}
+
 		[HttpPost]
         
         public IActionResult SaveEdit(EditProduct productVM)
         {
-            var product = adminProduct.GetProductById(productVM.Id); // استدعاء الأسلوب المتزامن
+            //var product = adminProduct.GetProductById(productVM.Id); // استدعاء الأسلوب 
+            var existing = dbcontext.Products.FirstOrDefault(e => e.Id == productVM.Id);
 
-            if (product == null)
+
+            //if (product == null)
+            //{
+            //    return RedirectToAction("NOTFOUND", "Home");
+            //}
+            if (existing != null)
             {
-                return NotFound();
+                // تحديث الخصائص
+                existing.Name = productVM.Name;
+                existing.Detail = productVM.Detail;
+                existing.Price = productVM.Price;
+                existing.ImageUrl = productVM.ImageUrl; // إضافة تحديث URL الصورة
+
+                // حفظ التغييرات بشكل متزامن
+                dbcontext.SaveChanges();
+
+                return RedirectToAction("Edit", new { id = productVM.Id });
             }
+            return RedirectToAction("Edit", new { id = productVM.Id });
+           
 
-            // تحديث خصائص المنتج
-            product.Name = productVM.Name;
-            product.Detail = productVM.Detail;
-            product.Price = productVM.Price;
-            product.ImageUrl = productVM.ImageUrl;
 
-            // تحديث المنتج في قاعدة البيانات
-            var updatedProduct = adminProduct.UpdateProduct(product); // استدعاء الأسلوب المتزامن
+              
 
-            if (updatedProduct != null)
-            {
-                return RedirectToAction("GeAllProducts");
-            }
+            
 
-            return View("Edit",  productVM ); // إعادة عرض الصفحة في حال الفشل
         }
 
         [HttpPost]
         public IActionResult Delete(EditProduct productVM)
         {
             // استدعاء دالة الحذف من خدمة إدارة المنتجات باستخدام المعرف
-             adminProduct.Delete(productVM.Id);
+            var existing = dbcontext.Products.Find(productVM.Id);
 
-                // تأكد من أن لديك طريقة Delete في adminProduct
+            if (existing != null)
+            {
+                dbcontext.Products.Remove(existing); // حذف المنتج الموجود
+                dbcontext.SaveChanges(); // حفظ التغييرات
+                return RedirectToAction("GeAllProducts"); // إعادة التوجيه بعد الحذف
 
-            return RedirectToAction("GeAllProducts"); // إعادة التوجيه بعد الحذف
+            }
+            return RedirectToAction("Edit", new { id = productVM.Id });
+
+            // تأكد من أن لديك طريقة Delete في adminProduct
 
 
         }
+
+
+        //[HttpPost]
+        //public IActionResult Delete2(int Id)
+        //{
+        //    استدعاء دالة الحذف من خدمة إدارة المنتجات باستخدام المعرف
+        //   var existing = dbcontext.Products.Find(Id);
+
+        //    if (existing != null)
+        //    {
+        //        dbcontext.Products.Remove(existing); // حذف المنتج الموجود
+        //        dbcontext.SaveChanges(); // حفظ التغييرات
+        //        return RedirectToAction("GeAllProducts"); // إعادة التوجيه بعد الحذف
+
+        //    }
+        //    return RedirectToAction("GeAllProducts", "Home");
+
+        //    //تأكد من أن لديك طريقة Delete في adminProduct
+ 
+
+
+
+
+        //}
+
+
 
 
 
