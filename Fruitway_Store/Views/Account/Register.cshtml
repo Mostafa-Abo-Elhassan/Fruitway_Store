@@ -1,0 +1,114 @@
+﻿@model Fruitway_Store.Models.ViewModels.RegisterVM
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruitway Store - Register</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://res.cloudinary.com/dfgunzope/image/upload/v1728004076/tz4nddjnaorabpuyrrhs.jpg'); /* Add the URL of your fruit image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .register-container {
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+            .register-container h3 {
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+        .form-control {
+            border-radius: 10px;
+            height: 45px;
+            font-size: 1.1rem;
+        }
+
+        .btn-custom {
+            background-color: #28a745;
+            border: none;
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 1.2rem;
+            width: 100%;
+            color: white;
+        }
+
+            .btn-custom:hover {
+                background-color: #218838;
+            }
+
+        .additional-links {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <!-- Register Form -->
+        <h3>Create Your Account</h3>
+        <form asp-action="Register" method="post">
+            <!-- Username Field -->
+            <div class="mb-4">
+                <label asp-for="UserName" class="form-label">Username</label>
+                <input asp-for="UserName" class="form-control" type="text" placeholder="Enter your username" required>
+              @*   <span asp-validation-for="UserName" class="text-danger"></span> *@
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-4">
+                <label asp-for="Email" class="form-label">Email address</label>
+                <input asp-for="Email" class="form-control" type="email" placeholder="Enter your email" required>
+               @*  <span asp-validation-for="Email" class="text-danger"></span> *@
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-4">
+                <label asp-for="Password" class="form-label">Password</label>
+                <input asp-for="Password" class="form-control" type="password" placeholder="Create a password" required>
+               @*  <span asp-validation-for="Password" class="text-danger"></span> *@
+            </div>
+
+            <!-- Confirm Password Field -->
+           
+
+            <!-- Register Button -->
+            <button type="submit" class="btn btn-custom">Register</button>
+
+            <!-- Login Link -->
+            <div class="additional-links">
+                <p>Already have an account? <a asp-action="Login">Login here</a></p>
+                <p>Back To Home <a asp-action="Index" asp-controller="Home">Home here</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

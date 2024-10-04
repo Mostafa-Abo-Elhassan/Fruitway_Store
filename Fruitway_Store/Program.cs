@@ -1,6 +1,7 @@
 using Fruitway_Store.Data;
 using Fruitway_Store.Repository.IRepo;
 using Fruitway_Store.Repository.Repo;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Fruitway_Store
@@ -15,9 +16,23 @@ namespace Fruitway_Store
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddDbContext<ApplicationDbcontext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("Fruitway")));
+      options.UseSqlServer(builder.Configuration.GetConnectionString("Fruitway")));
             builder.Services.AddScoped<IProductRepo,ProductRepo>();
 			builder.Services.AddScoped<IAdminProduct, AdminProductRepo>();
+
+
+			builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+	 options.SignIn.RequireConfirmedAccount = true)
+		 .AddRoles<IdentityRole>()
+.AddEntityFrameworkStores<ApplicationDbcontext>();
+
+
+			builder.Services.Configure<IdentityOptions>(options =>
+			{
+				options.Password.RequireDigit = true;
+
+
+			});
 
 			var app = builder.Build();
 

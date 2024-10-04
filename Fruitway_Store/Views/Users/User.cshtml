@@ -1,0 +1,113 @@
+﻿<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    
+                    <h1>Edit Profile</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb section -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - Fruitway Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('path/to/your/background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .edit-profile-container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-title {
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .profile-image {
+            width: 150px; /* Adjust the size of the profile image */
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            background-color: #28a745; /* Customize your primary color */
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #218838; /* Darker shade for hover effect */
+            }
+
+        .text-danger {
+            font-size: 0.9rem; /* Slightly smaller font for error messages */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="edit-profile-container">
+            <h2 class="form-title">Edit Your Profile</h2>
+
+            <!-- Placeholder for current profile image -->
+            <img src="https://img.icons8.com/avantgarde/100/test-account.png" alt="Profile Image" class="profile-image" />
+
+            <form action="/Account/EditProfile" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required />
+                    <div class="text-danger" id="usernameError"></div> <!-- Error message placeholder -->
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required />
+                    <div class="text-danger" id="emailError"></div> <!-- Error message placeholder -->
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">New Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter a new password" />
+                    <div class="text-danger" id="passwordError"></div> <!-- Error message placeholder -->
+                </div>
+               
+                
+                <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+                <button type="submit" class="btn btn-danger w-100 my-2" asp-area="" asp-action="Delete"
+                        asp-controller="AdminProduct">
+                    Delete Account
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>
