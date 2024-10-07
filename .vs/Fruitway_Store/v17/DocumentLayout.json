@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{113C1401-F40C-4BFE-BE9F-417662CCF09B}|Fruitway_Store\\Fruitway_Store.csproj|c:\\users\\workstation\\source\\repos\\fruitway_store\\fruitway_store\\controllers\\adminproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{113C1401-F40C-4BFE-BE9F-417662CCF09B}|Fruitway_Store\\Fruitway_Store.csproj|solutionrelative:fruitway_store\\controllers\\adminproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{113C1401-F40C-4BFE-BE9F-417662CCF09B}|Fruitway_Store\\Fruitway_Store.csproj|c:\\users\\workstation\\source\\repos\\fruitway_store\\fruitway_store\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{113C1401-F40C-4BFE-BE9F-417662CCF09B}|Fruitway_Store\\Fruitway_Store.csproj|solutionrelative:fruitway_store\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{113C1401-F40C-4BFE-BE9F-417662CCF09B}|Fruitway_Store\\Fruitway_Store.csproj|c:\\users\\workstation\\source\\repos\\fruitway_store\\fruitway_store\\repository\\repo\\adminproductrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{113C1401-F40C-4BFE-BE9F-417662CCF09B}|Fruitway_Store\\Fruitway_Store.csproj|solutionrelative:fruitway_store\\repository\\repo\\adminproductrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{113C1401-F40C-4BFE-BE9F-417662CCF09B}|Fruitway_Store\\Fruitway_Store.csproj|c:\\users\\workstation\\source\\repos\\fruitway_store\\fruitway_store\\controllers\\adminusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{113C1401-F40C-4BFE-BE9F-417662CCF09B}|Fruitway_Store\\Fruitway_Store.csproj|solutionrelative:fruitway_store\\controllers\\adminusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{113C1401-F40C-4BFE-BE9F-417662CCF09B}|Fruitway_Store\\Fruitway_Store.csproj|c:\\users\\workstation\\source\\repos\\fruitway_store\\fruitway_store\\views\\adminusers\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{113C1401-F40C-4BFE-BE9F-417662CCF09B}|Fruitway_Store\\Fruitway_Store.csproj|solutionrelative:fruitway_store\\views\\adminusers\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{113C1401-F40C-4BFE-BE9F-417662CCF09B}|Fruitway_Store\\Fruitway_Store.csproj|c:\\users\\workstation\\source\\repos\\fruitway_store\\fruitway_store\\views\\adminusers\\allusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{113C1401-F40C-4BFE-BE9F-417662CCF09B}|Fruitway_Store\\Fruitway_Store.csproj|solutionrelative:fruitway_store\\views\\adminusers\\allusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{113C1401-F40C-4BFE-BE9F-417662CCF09B}|Fruitway_Store\\Fruitway_Store.csproj|c:\\users\\workstation\\source\\repos\\fruitway_store\\fruitway_store\\controllers\\adminproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{113C1401-F40C-4BFE-BE9F-417662CCF09B}|Fruitway_Store\\Fruitway_Store.csproj|solutionrelative:fruitway_store\\controllers\\adminproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,29 +38,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "AdminUsers.cs",
+              "DocumentMoniker": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\Controllers\\AdminUsers.cs",
+              "RelativeDocumentMoniker": "Fruitway_Store\\Controllers\\AdminUsers.cs",
+              "ToolTip": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\Controllers\\AdminUsers.cs",
+              "RelativeToolTip": "Fruitway_Store\\Controllers\\AdminUsers.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAGAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T21:36:53.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AdminProductController.cs",
               "DocumentMoniker": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\Controllers\\AdminProductController.cs",
               "RelativeDocumentMoniker": "Fruitway_Store\\Controllers\\AdminProductController.cs",
               "ToolTip": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\Controllers\\AdminProductController.cs",
               "RelativeToolTip": "Fruitway_Store\\Controllers\\AdminProductController.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAUwGgAAAAPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T23:54:57.012Z",
+              "WhenOpened": "2024-10-06T21:36:47.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Fruitway_Store\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Fruitway_Store\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAAAGQAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T21:36:34.071Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminProductRepo.cs",
-              "DocumentMoniker": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\Repository\\Repo\\AdminProductRepo.cs",
-              "RelativeDocumentMoniker": "Fruitway_Store\\Repository\\Repo\\AdminProductRepo.cs",
-              "ToolTip": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\Repository\\Repo\\AdminProductRepo.cs",
-              "RelativeToolTip": "Fruitway_Store\\Repository\\Repo\\AdminProductRepo.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAiwCMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T23:45:43.685Z",
-              "EditorCaption": ""
+              "DocumentIndex": 2,
+              "Title": "AddUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\Views\\AdminUsers\\AddUser.cshtml",
+              "RelativeDocumentMoniker": "Fruitway_Store\\Views\\AdminUsers\\AddUser.cshtml",
+              "ToolTip": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\Views\\AdminUsers\\AddUser.cshtml",
+              "RelativeToolTip": "Fruitway_Store\\Views\\AdminUsers\\AddUser.cshtml",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAAAAUAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-06T21:24:49.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AllUsers.cshtml",
+              "DocumentMoniker": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\Views\\AdminUsers\\AllUsers.cshtml",
+              "RelativeDocumentMoniker": "Fruitway_Store\\Views\\AdminUsers\\AllUsers.cshtml",
+              "ToolTip": "C:\\Users\\workstation\\source\\repos\\Fruitway_Store\\Fruitway_Store\\Views\\AdminUsers\\AllUsers.cshtml",
+              "RelativeToolTip": "Fruitway_Store\\Views\\AdminUsers\\AllUsers.cshtml",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAAAJ8AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-06T21:24:44.984Z"
             }
           ]
         }

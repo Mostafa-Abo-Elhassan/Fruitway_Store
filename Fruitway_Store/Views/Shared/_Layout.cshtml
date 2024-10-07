@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager;
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -48,10 +53,9 @@
                 <div class="col-lg-12 col-sm-12 text-center">
                     <div class="main-menu-wrap">
                         <!-- logo -->
+                       
                         <div class="site-logo">
-                            <a href="index.html">
-                                <img src="~/img/logo.png" alt="">
-                            </a>
+                            <a class="navbar-brand " asp-area="" asp-controller="Home" asp-action="Index"><h3 class="text-light">Fruitway</h3></a>
                         </div>
                         <!-- logo -->
                         <!-- menu start -->
@@ -59,43 +63,24 @@
                             <ul>
                                 <li class="current-list-item">
                                     <a asp-action="Index" asp-controller="Home">Home</a>
-                                    @* <ul class="sub-menu">
-                                    <li><a href="index.html">Static Home</a></li>
-                                    <li><a href="index_2.html">Slider Home</a></li>
-                                    </ul> *@
+                                   
                                 </li>
                                 <li><a asp-action="About" asp-controller="Home">About</a></li>
-                                <li>
-                                    <a href="#">Pages</a>
-                                    <ul class="sub-menu">
-                                        <li><a asp-action="NOTFOUND" asp-controller="Home">404 page</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="checkout.html">Check Out</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a asp-action="Shop" asp-controller="Product">Shop</a></li>
-                                    </ul>
-                                </li>
+                               
 
 
                                 <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
                                 <li>
                                     <a asp-action="Shop" asp-controller="Product">Shop</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="checkout.html">Check Out</a></li>
-                                        <li><a href="single-product.html">Single Product</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                    </ul>
+                                   
                                 </li>
                                 <li>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <a asp-action="GeAllProducts" asp-controller="AdminProduct">Admin</a>
+                                       
+                                    }
 
-                                    <a asp-action="GeAllProducts" asp-controller="AdminProduct">Admin</a>
-                                    <ul class="sub-menu">
-                                        <li><a asp-action="GeAllProducts" asp-controller="AdminProduct">All Product</a></li>
-                                        <li><a asp-action="ADD" asp-controller="AdminProduct">Add Product</a></li>
-
-                                    </ul>
                                 </li>
 
 
@@ -110,43 +95,59 @@
 
 
                                 </a> *@
-                                <li>
-                                    <a class="login-icon" asp-action="Login" asp-controller="Account" title="Login">
-                                        <i class="fas fa-sign-in-alt"></i>
-                                        <span class="username">Login</span> <!-- Optional: Add a label -->
-                                    </a>
-
-                                </li>
-                                <li>
-                                    <a class="register-icon" asp-action="Register" asp-controller="Account" title="Register">
-                                        <i class="fas fa-user-plus"></i>
-                                        <span class="username">Register</span> <!-- Optional: Add a label -->
-                                    </a>
-                                </li>
-
-
-
-                                <li>
-                                    <a class="user-profile" asp-action="User" asp-controller="Users" title="User Profile">
-                                        <i class="fas fa-user"></i>
-
-                                    </a>
-                                    <ul class="sub-menu ">
-                                        <li>
-                                            <a class="btn btn-primary text-light" asp-action="User" asp-controller="Users">
-                                                <i class="fas fa-user"></i>
-                                                <span class="username">  Edit Profile</span>
-
-                                            </a></li>
-                                        <a class="logout-icon btn btn-danger" asp-action="Logout" asp-controller="Account">
-                                            <i class="fas fa-sign-out-alt"></i>
-                                            <span class="username">Logout</span> <!-- Optional: Add a label -->
+                                @if (!SignInManager.IsSignedIn(User))
+                                {
+                                    @*
+                                <p> Hello @User?.Identity?.Name </p> *@
+                                    <li>
+                                        <a class="login-icon" asp-action="Login" asp-controller="Account" title="Login">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            <span class="username">Login</span> <!-- Optional: Add a label -->
                                         </a>
 
+                                    </li>
+                                    <li>
+                                        <a class="register-icon" asp-action="Register" asp-controller="Account" title="Register">
+                                            <i class="fas fa-user-plus"></i>
+                                            <span class="username">Register</span> <!-- Optional: Add a label -->
+                                        </a>
+                                    </li>
 
-                                    </ul>
 
-                                </li>
+                                   
+                                }
+                                else
+                                {
+                                    <li>
+                                        <a class="user-profile" asp-action="User" asp-controller="Users" title="User Profile">
+                                            <i class="fas fa-user"></i>
+
+                                        </a>
+                                        <ul class="sub-menu ">
+                                            <li>
+                                                <a class="btn btn-primary text-light" asp-action="User" asp-controller="Users"
+                                                   asp-route-Id=" @User?.Identity?.Name">
+                                                    <i class="fas fa-user"></i>
+                                                    <span class="username">  Hello @User?.Identity?.Name</span>
+                                                   
+                                                </a>
+                                            </li>
+                                            <a class="logout-icon btn btn-danger" asp-action="Logout" asp-controller="Account">
+                                                <i class="fas fa-sign-out-alt"></i>
+                                                <span class="username">Logout</span> <!-- Optional: Add a label -->
+                                            </a>
+                                        </ul>
+
+                                    </li>
+
+
+
+                                }
+
+
+
+
+
 
 
 
@@ -154,23 +155,23 @@
                                     <div class="header-icons">
                                         <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
                                         <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
-                              
 
-                                   
-                                
+
+
+
 
                                     </div>
 
                                 </li>
-                               
+
                             </ul>
-                          
+
                         </nav>
                         <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
                         <div class="mobile-menu"></div>
                         <!-- menu end -->
 
-                       
+
                     </div>
                 </div>
             </div>
@@ -208,29 +209,29 @@
 
     <!-- logo carousel -->
     @* <div class="logo-carousel-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="logo-carousel-inner">
-                        <div class="single-logo-item">
-                            <img src="~/img/company-logos/1.png" alt="">
-                        </div>
-                        <div class="single-logo-item">
-                            <img src="~/img/company-logos/2.png" alt="">
-                        </div>
-                        <div class="single-logo-item">
-                            <img src="~/img/company-logos/3.png" alt="">
-                        </div>
-                        <div class="single-logo-item">
-                            <img src="~/img/company-logos/4.png" alt="">
-                        </div>
-                        <div class="single-logo-item">
-                            <img src="~/img/company-logos/5.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-12">
+    <div class="logo-carousel-inner">
+    <div class="single-logo-item">
+    <img src="~/img/company-logos/1.png" alt="">
+    </div>
+    <div class="single-logo-item">
+    <img src="~/img/company-logos/2.png" alt="">
+    </div>
+    <div class="single-logo-item">
+    <img src="~/img/company-logos/3.png" alt="">
+    </div>
+    <div class="single-logo-item">
+    <img src="~/img/company-logos/4.png" alt="">
+    </div>
+    <div class="single-logo-item">
+    <img src="~/img/company-logos/5.png" alt="">
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
     </div> *@
     <!-- end logo carousel -->
     <!-- footer -->
@@ -247,8 +248,8 @@
                     <div class="footer-box get-in-touch">
                         <h2 class="widget-title">Get in Touch</h2>
                         <ul>
-                            <li>34/8, East Hukupara, Gifirtok, Sadan.</li>
-                            <li>support@fruitkha.com</li>
+                            <li>Fruitway , Cairo Egypt</li>
+                            <li>support@fruitway.com</li>
                             <li>+00 111 222 3333</li>
                         </ul>
                     </div>
@@ -257,11 +258,11 @@
                     <div class="footer-box pages">
                         <h2 class="widget-title">Pages</h2>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="services.html">Shop</a></li>
-                            <li><a href="news.html">News</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+                            <li><a asp-action="About" asp-controller="Home">About</a></li>
+                            <li><a asp-action="Shop" asp-controller="Product">Shop</a></li>
+                            
+                            <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -269,7 +270,7 @@
                     <div class="footer-box subscribe">
                         <h2 class="widget-title">Subscribe</h2>
                         <p>Subscribe to our mailing list to get the latest updates.</p>
-                        <form action="index.html">
+                        <form asp-action="Index" asp-controller="Home">
                             <input type="email" placeholder="Email">
                             <button type="submit"><i class="fas fa-paper-plane"></i></button>
                         </form>
@@ -285,8 +286,8 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <p>
-                        Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.<br>
-                        Distributed By - <a href="https://themewagon.com/">Themewagon</a>
+                        Copyrights &copy; 2019 - <a href="#">Fruitway</a>,  All Rights Reserved.<br>
+                        Powerd By - <a href="https://www.linkedin.com/in/mostafa-aboelhassan/">Mostafa Mahmoud</a>
                     </p>
                 </div>
                 <div class="col-lg-6 text-right col-md-12">
@@ -295,7 +296,7 @@
                             <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/mostafa-aboelhassan/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                             <li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
                         </ul>
                     </div>

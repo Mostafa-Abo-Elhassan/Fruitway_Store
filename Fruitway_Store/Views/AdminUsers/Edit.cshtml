@@ -1,8 +1,7 @@
-﻿@model Fruitway_Store.Models.ViewModels.AddProductVM
-@{
-    ViewData["Title"] = "Add product";
-}
+﻿@model Fruitway_Store.Models.ViewModels.AdminEditUserVM
 
+
+<!-- breadcrumb-section -->
 <div class="bg-dark" style=" background-color: #051224;">
     <div class="container">
         <div class="row">
@@ -17,6 +16,10 @@
         </div>
     </div>
 </div>
+
+
+
+
 
 
 <!DOCTYPE html>
@@ -80,7 +83,7 @@
     <div>
         <div class class=" text-center">
             <p class="text-dark text-center ">Admin </p>
-            <h1 class="text-dark text-center ">Add product</h1>
+            <h1 class="text-dark text-center ">Edit product</h1>
 
         </div>
     </div>
@@ -107,7 +110,7 @@
                                 <i class="fas fa-user me-2"></i> Add Product
                             </a>
                         </li>
-                          <li class="nav-item">
+                        <li class="nav-item">
                             <a asp-action="AllUsers" asp-controller="AdminUsers" class="nav-link " aria-current="page">
                                 <i class="fas fa-home me-2"></i>  All Users
                             </a>
@@ -117,7 +120,7 @@
                                 <i class="fas fa-home me-2"></i>  Add User
                             </a>
                         </li>
-                       
+
                     </ul>
                     <hr>
 
@@ -134,34 +137,54 @@
 
 
 
+
+
                 <div class="container py-5">
-                    <form method="post" asp-controller="AdminProduct" asp-action="SaveAdd">
+                    <form method="post" asp-action="SaveEdit" asp-controller="AdminUsers" enctype="multipart/form-data">
                         <div class="mb-3">
-                            <label class="form-label" for="name">Name of Product:</label>
-                            <input class="form-control" type="text" id="name" asp-for="Name">
+
+                            <label class="form-label">Id</label>
+                            <input asp-for="Id" class="form-control" type="text" placeholder="Enter your username" readonly required>
+
+                        </div>
+                        <div class="mb-3">
+
+                            <label class="form-label">Old Username</label>
+                            <input asp-for="UserName" class="form-control" type="text" placeholder="Enter your username" readonly required>
+
+                        </div>
+                      
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Old Email</label>
+                            <input asp-for="Email" class="form-control" type="email" placeholder="Enter your email" readonly required>
+                            <div class="text-danger" id="emailError"></div> <!-- Error message placeholder -->
+                        </div>
+                        <div class="mb-3">
+
+                            <label class="form-label">New Username</label>
+                            <input asp-for="NEWUserName" class="form-control" type="text" placeholder="Enter your username" required>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">New Email</label>
+                            <input asp-for="NEWEmail" class="form-control" type="email" placeholder="Enter your email" required>
+                            <div class="text-danger" id="emailError"></div> <!-- Error message placeholder -->
+                        </div>
+                      
+                        <div class="mb-3">
+                            <label for="password" class="form-label">New Password</label>
+                            <input asp-for="NEWPassword" class="form-control" type="password" placeholder="Create a password" required>
+                            <div class="text-danger" id="passwordError"></div> <!-- Error message placeholder -->
                         </div>
 
-                        <div class="mb-3">
-                            <label class="form-label" for="details">Details:</label>
-                            <input class="form-control" type="text" id="details" asp-for="Detail">
-                        </div>
 
-                        <div class="mb-3">
-                            <label class="form-label" for="price">Price:</label>
-                            <input class="form-control" type="number" id="price" asp-for="Price">
-                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Save Changes</button>
 
-                        <div class="mb-3">
-                            <label class="form-label" for="imageUrl">URL Image:</label>
-                            <input class="form-control" type="text" id="imageUrl" asp-for="ImageUrl">
-                        </div>
-
-                        <div class="mb-3">
-                            <button type="submit" class="btn btn-dark">Add Product</button>
-                        </div>
                     </form>
-                </div>
 
+
+
+                </div>
 
             </div>
 
@@ -176,27 +199,6 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

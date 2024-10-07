@@ -19,9 +19,10 @@ namespace Fruitway_Store
       options.UseSqlServer(builder.Configuration.GetConnectionString("Fruitway")));
             builder.Services.AddScoped<IProductRepo,ProductRepo>();
 			builder.Services.AddScoped<IAdminProduct, AdminProductRepo>();
+            builder.Services.AddScoped<Iuser, UserRepo>();
 
 
-			builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 	 options.SignIn.RequireConfirmedAccount = true)
 		 .AddRoles<IdentityRole>()
 .AddEntityFrameworkStores<ApplicationDbcontext>();
@@ -44,7 +45,7 @@ namespace Fruitway_Store
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthorization();
             app.UseAuthorization();
 
             app.MapControllerRoute(

@@ -1,7 +1,5 @@
-﻿@model Fruitway_Store.Models.ViewModels.AddProductVM
-@{
-    ViewData["Title"] = "Add product";
-}
+﻿@model Fruitway_Store.Models.ViewModels.EditUserVM
+<!-- breadcrumb-section -->
 
 <div class="bg-dark" style=" background-color: #051224;">
     <div class="container">
@@ -17,8 +15,7 @@
         </div>
     </div>
 </div>
-
-
+<!-- end breadcrumb section -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,52 +73,36 @@
 </head>
 
 <body>
-
     <div>
         <div class class=" text-center">
-            <p class="text-dark text-center ">Admin </p>
-            <h1 class="text-dark text-center ">Add product</h1>
+            <p class="text-dark text-center "> </p>
+            <h1 class="text-dark text-center ">Delete Account</h1>
 
         </div>
     </div>
-
-
     <div class="container-fluid m-5">
         <div class="row">
             <div class="col-md-0">
                 <!-- Sidebar -->
                 <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 250px; height: 100vh;">
                     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-                        <span class="fs-4">  Admin Tools</span>
+                        <span class="fs-4">  Profile Sittings</span>
                     </a>
                     <hr>
                     <!-- Navigation Links -->
                     <ul class="nav nav-pills flex-column mb-auto">
                         <li class="nav-item">
-                            <a asp-action="GeAllProducts" asp-controller="AdminProduct" class="nav-link active" aria-current="page">
-                                <i class="fas fa-home me-2"></i>  All Products
+                            <a asp-action="user" asp-controller="Users" class="nav-link active" aria-current="page">
+                                <i class="fas fa-home me-2"></i>  Edit Profile
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a asp-area="" asp-action="ADD" asp-controller="AdminProduct" class="nav-link">
-                                <i class="fas fa-user me-2"></i> Add Product
-                            </a>
-                        </li>
-                          <li class="nav-item">
-                            <a asp-action="AllUsers" asp-controller="AdminUsers" class="nav-link " aria-current="page">
-                                <i class="fas fa-home me-2"></i>  All Users
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a asp-action="AddUser" asp-controller="AdminUsers" class="nav-link " aria-current="page">
-                                <i class="fas fa-home me-2"></i>  Add User
+                            <a asp-area="" asp-action="DeleteAccount" asp-controller="Users" class="nav-link">
+                                <i class="fas fa-user me-2"></i>  Delete Your Account
                             </a>
                         </li>
                        
                     </ul>
-                    <hr>
-
-
                 </div>
 
                 <!-- Font Awesome for social media icons -->
@@ -134,33 +115,37 @@
 
 
 
-                <div class="container py-5">
-                    <form method="post" asp-controller="AdminProduct" asp-action="SaveAdd">
+
+                <div class="edit-profile-container">
+                    <h2 class="form-title">Delete Your Account</h2>
+
+                    <!-- Placeholder for current profile image -->
+                    <img src="https://img.icons8.com/avantgarde/100/test-account.png" alt="Profile Image" class="profile-image" />
+
+                    <form method="post" asp-area="" asp-action="DeleteAccount" asp-controller="Users" enctype="multipart/form-data">
                         <div class="mb-3">
-                            <label class="form-label" for="name">Name of Product:</label>
-                            <input class="form-control" type="text" id="name" asp-for="Name">
+
+                            <label class="form-label"> Username</label>
+                            <input asp-for="UserName" class="form-control" type="text" placeholder="Enter your username" required>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label"> Password</label>
+                            <input asp-for="Password" class="form-control" type="password" placeholder="Create a password" required>
+                            <div class="text-danger" id="passwordError"></div> <!-- Error message placeholder -->
                         </div>
 
-                        <div class="mb-3">
-                            <label class="form-label" for="details">Details:</label>
-                            <input class="form-control" type="text" id="details" asp-for="Detail">
-                        </div>
+                        <button type="submit" class="btn btn-danger w-100 my-2" w-100">Delete Accoount</button>
 
-                        <div class="mb-3">
-                            <label class="form-label" for="price">Price:</label>
-                            <input class="form-control" type="number" id="price" asp-for="Price">
-                        </div>
 
-                        <div class="mb-3">
-                            <label class="form-label" for="imageUrl">URL Image:</label>
-                            <input class="form-control" type="text" id="imageUrl" asp-for="ImageUrl">
-                        </div>
-
-                        <div class="mb-3">
-                            <button type="submit" class="btn btn-dark">Add Product</button>
-                        </div>
                     </form>
+
+
+
+                   
                 </div>
+
+
 
 
             </div>
@@ -176,34 +161,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

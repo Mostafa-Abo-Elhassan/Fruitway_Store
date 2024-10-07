@@ -1,4 +1,4 @@
-﻿@model        Fruitway_Store.Models.ViewModels.EditUserVM
+﻿@model Fruitway_Store.Models.ViewModels.USERS
 <!-- breadcrumb-section -->
 
 <div class="bg-dark" style=" background-color: #051224;">
@@ -88,26 +88,37 @@
                 <!-- Sidebar -->
                 <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 250px; height: 100vh;">
                     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-                        <span class="fs-4">  Profile Sittings</span>
+                        <span class="fs-4"> Admin Tools</span>
                     </a>
                     <hr>
                     <!-- Navigation Links -->
                     <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item">
-                            <a asp-action="user" asp-controller="Users" class="nav-link active" aria-current="page">
-                                <i class="fas fa-home me-2"></i>  Edit Profile
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a asp-area="" asp-action="DeleteAccount" asp-controller="Users" class="nav-link">
-                                <i class="fas fa-user me-2"></i>  Delete Your Account
-                            </a>
-                        </li>
-                       
-                    </ul>
+                        <ul class="nav nav-pills flex-column mb-auto">
+                            <li class="nav-item">
+                                <a asp-action="GeAllProducts" asp-controller="AdminProduct" class="nav-link active" aria-current="page">
+                                    <i class="fas fa-home me-2"></i>  All Products
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-area="" asp-action="ADD" asp-controller="AdminProduct" class="nav-link">
+                                    <i class="fas fa-user me-2"></i> Add Product
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-action="AllUsers" asp-controller="AdminUsers" class="nav-link " aria-current="page">
+                                    <i class="fas fa-home me-2"></i>  All Users
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-action="AddUser" asp-controller="AdminUsers" class="nav-link " aria-current="page">
+                                    <i class="fas fa-home me-2"></i>  Add User
+                                </a>
+                            </li>
+
+                        </ul>
                     <hr>
-                   
-                    
+
+
                 </div>
 
                 <!-- Font Awesome for social media icons -->
@@ -115,60 +126,55 @@
 
             </div>
 
-           
+
             <div class="col-md-8">
 
 
 
-
                 <div class="edit-profile-container">
-                    <h2 class="form-title">Edit Your Profile</h2>
+                    <h2 class="form-title">Add User</h2>
 
                     <!-- Placeholder for current profile image -->
                     <img src="https://img.icons8.com/avantgarde/100/test-account.png" alt="Profile Image" class="profile-image" />
-
-                    <form method="post" asp-action="user" asp-controller="Users" enctype="multipart/form-data">
-                        <div class="mb-3">
-
-                            <label class="form-label">Old Username</label>
-                            <input asp-for="UserName" class="form-control" type="text" placeholder="Enter your username" required>
-
+                    <form method="post" asp-action="CreateUser" asp-controller="AdminUsers">
+                        <div class="form-group">
+                            <label asp-for="UserName">Username</label>
+                            <input type="text" class="form-control" asp-for="UserName" required />
                         </div>
-                        <div class="mb-3">
-
-                            <label class="form-label">New Username</label>
-                            <input asp-for="NEWUserName" class="form-control" type="text" placeholder="Enter your username" required>
-
+                        <div class="form-group">
+                            <label asp-for="Email">Email</label>
+                            <input type="email" class="form-control" asp-for="Email" required />
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Old Email</label>
-                            <input asp-for="Email" class="form-control" type="email" placeholder="Enter your email" required>
-                            <div class="text-danger" id="emailError"></div> <!-- Error message placeholder -->
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">New Email</label>
-                            <input asp-for="NEWEmail" class="form-control" type="email" placeholder="Enter your email" required>
-                            <div class="text-danger" id="emailError"></div> <!-- Error message placeholder -->
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Old Password</label>
-                            <input asp-for="Password" class="form-control" type="password" placeholder="Create a password" required>
-                            <div class="text-danger" id="passwordError"></div> <!-- Error message placeholder -->
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">New Password</label>
-                            <input asp-for="NEWPassword" class="form-control" type="password" placeholder="Create a password" required>
-                            <div class="text-danger" id="passwordError"></div> <!-- Error message placeholder -->
+                        <div class="form-group">
+                            <label asp-for="Email">Password</label>
+                            <input type="password" class="form-control" asp-for="Password" required />
                         </div>
 
 
-                        <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+                        <div class="form-group">
+                            <label>Role</label><br/>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="RoleUser" value="User" checked disabled>
+                                <label class="form-check-label" for="RoleUser">User</label>
+                            </div>
+                            @if (User.IsInRole("Super_Admin"))
+                            {
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="RoleAdmin" asp-for="checkAdmin">
+                                    <label class="form-check-label" for="RoleAdmin">Admin</label>
+                                </div>
 
+                            }
+
+                        </div>
+
+
+                        <button type="submit" class="btn btn-dark">Create User</button>
+                        
                     </form>
 
 
 
-                 
                 </div>
 
 
