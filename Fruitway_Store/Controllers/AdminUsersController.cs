@@ -87,7 +87,7 @@ namespace Fruitway_Store.Controllers
                 USER.PasswordHash = passwordHasher.HashPassword(USER, editUserVM.NEWPassword);
                 await userManager.UpdateAsync(USER);
 
-                return RedirectToAction("Edit","AdminUsers", USER.Id);
+                return RedirectToAction("Edit","AdminUsers");
 
                
 

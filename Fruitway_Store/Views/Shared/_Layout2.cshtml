@@ -1,5 +1,4 @@
-﻿
-@using Microsoft.AspNetCore.Identity
+﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> SignInManager;
 
 
@@ -53,7 +52,7 @@
                 <div class="col-lg-12 col-sm-12 text-center">
                     <div class="main-menu-wrap">
                         <!-- logo -->
-                       
+
                         <div class="site-logo">
                             <a class="navbar-brand " asp-area="" asp-controller="Home" asp-action="Index"><h3 class="text-light">Fruitway</h3></a>
                         </div>
@@ -63,22 +62,22 @@
                             <ul>
                                 <li class="current-list-item">
                                     <a asp-action="Index" asp-controller="Home">Home</a>
-                                   
+
                                 </li>
                                 <li><a asp-action="About" asp-controller="Home">About</a></li>
-                               
+
 
 
                                 <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
                                 <li>
                                     <a asp-action="Shop" asp-controller="Product">Shop</a>
-                                   
+
                                 </li>
                                 <li>
                                     @if (User.IsInRole("Admin"))
                                     {
                                         <a asp-action="GeAllProducts" asp-controller="AdminProduct">Admin</a>
-                                       
+
                                     }
 
                                 </li>
@@ -114,7 +113,7 @@
                                     </li>
 
 
-                                   
+
                                 }
                                 else
                                 {
@@ -129,7 +128,7 @@
                                                    asp-route-Id=" @User?.Identity?.Name">
                                                     <i class="fas fa-user"></i>
                                                     <span class="username">  Hello @User?.Identity?.Name</span>
-                                                   
+
                                                 </a>
                                             </li>
                                             <a class="logout-icon btn btn-danger" asp-action="Logout" asp-controller="Account">
@@ -153,7 +152,7 @@
 
                                 <li>
                                     <div class="header-icons">
-                                        <a class="shopping-cart" asp-controller="ShappingCart" asp-action="Index"><i class="fas fa-shopping-cart"></i></a>
+                                        <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
                                         <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 
 
@@ -207,62 +206,7 @@
 
 
 
-    <!-- logo carousel -->
-    @* <div class="logo-carousel-section">
-    <div class="container">
-    <div class="row">
-    <div class="col-lg-12">
-    <div class="logo-carousel-inner">
-    <div class="single-logo-item">
-    <img src="~/img/company-logos/1.png" alt="">
-    </div>
-    <div class="single-logo-item">
-    <img src="~/img/company-logos/2.png" alt="">
-    </div>
-    <div class="single-logo-item">
-    <img src="~/img/company-logos/3.png" alt="">
-    </div>
-    <div class="single-logo-item">
-    <img src="~/img/company-logos/4.png" alt="">
-    </div>
-    <div class="single-logo-item">
-    <img src="~/img/company-logos/5.png" alt="">
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div> *@
-    <!-- end logo carousel -->
-    <!-- footer -->
-   
-    <!-- end footer -->
-    <!-- copyright -->
-    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12">
-                    <p>
-                        Copyrights &copy; 2019 - <a href="#">Fruitway</a>,  All Rights Reserved.<br>
-                        Powerd By - <a href="https://www.linkedin.com/in/mostafa-aboelhassan/">Mostafa Mahmoud</a>
-                    </p>
-                </div>
-                <div class="col-lg-6 text-right col-md-12">
-                    <div class="social-icons">
-                        <ul>
-                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/mostafa-aboelhassan/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end copyright -->
-    <!-- jquery -->
+    
     <script src="~/js/jquery-1.11.3.min.js"></script>
     <!-- bootstrap -->
     <script src="~/bootstrap/js/bootstrap.min.js"></script>

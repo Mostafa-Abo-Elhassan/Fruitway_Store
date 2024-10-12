@@ -33,13 +33,25 @@ namespace Fruitway_Store.Controllers
             {
                 if (user != null)
                 {
+                 
                     bool result = await UserManager.CheckPasswordAsync(user, login.Password);
+
                     if (result == true)
                     {
+                        // تخزين اسم المستخدم في Session
+                    HttpContext.Session.SetString("Username", login.UserName);
+                        HttpContext.Session.SetString("Pass", login.Password);
+
+                        //ViewBag.userInfo = hh;
+
                         await signInManager.SignInAsync(user, login.RememberMe);
                         return RedirectToAction("Index", "Home");
+
+                        
                     }
                     ModelState.AddModelError("", "Invalid user name or password.");
+
+                   
                 }
 
                 ModelState.AddModelError("", "Invalid email or password.");
@@ -65,21 +77,7 @@ namespace Fruitway_Store.Controllers
         [HttpPost]
         public async Task<IActionResult> register(RegisterVM model)
         {
-            //var user = new IdentityUser
-            //{
-            //	UserName = model.UserName,
-            //	Email= model.Email
-            //};
-            //IdentityResult result = await UserManager.CreateAsync(user, model.Password);
-            //         if (result.Succeeded)
-            //         {
-            //	await UserManager.AddToRoleAsync(user, "User");
-
-            //	return RedirectToAction("Login", "Account");
-
-            //         }
-            //         return RedirectToAction("Register", "Account");
-
+           
 
 
 
@@ -95,14 +93,21 @@ namespace Fruitway_Store.Controllers
 
                 if (result.Succeeded)
                 {
+                  
                     var userrole = await UserManager.AddToRoleAsync(user, "User");
                     if (userrole.Succeeded)
                     {
                         await signInManager.SignInAsync(user, false);
                         return RedirectToAction("Login", "Account");
+                        
                     }
                     //return RedirectToAction("Index", "Home");
+
+                 
+
                     return RedirectToAction("Register");
+
+
                 }
 
                 else

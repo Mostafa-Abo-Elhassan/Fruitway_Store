@@ -1,6 +1,8 @@
 ﻿@model Fruitway_Store.Models.ViewModels.USERS
 <!-- breadcrumb-section -->
-
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
 <div class="bg-dark" style=" background-color: #051224;">
     <div class="container">
         <div class="row">
@@ -74,68 +76,15 @@
 
 <body>
 
-    <div>
-        <div class class=" text-center">
-            <p class="text-dark text-center "> </p>
-            <h1 class="text-dark text-center ">Edit Profile</h1>
+   
 
-        </div>
-    </div>
-
-    <div class="container-fluid m-5">
-        <div class="row">
-            <div class="col-md-0">
-                <!-- Sidebar -->
-                <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 250px; height: 100vh;">
-                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-                        <span class="fs-4"> Admin Tools</span>
-                    </a>
-                    <hr>
-                    <!-- Navigation Links -->
-                    <ul class="nav nav-pills flex-column mb-auto">
-                        <ul class="nav nav-pills flex-column mb-auto">
-                            <li class="nav-item">
-                                <a asp-action="GeAllProducts" asp-controller="AdminProduct" class="nav-link active" aria-current="page">
-                                    <i class="fas fa-home me-2"></i>  All Products
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a asp-area="" asp-action="ADD" asp-controller="AdminProduct" class="nav-link">
-                                    <i class="fas fa-user me-2"></i> Add Product
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a asp-action="AllUsers" asp-controller="AdminUsers" class="nav-link " aria-current="page">
-                                    <i class="fas fa-home me-2"></i>  All Users
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a asp-action="AddUser" asp-controller="AdminUsers" class="nav-link " aria-current="page">
-                                    <i class="fas fa-home me-2"></i>  Add User
-                                </a>
-                            </li>
-
-                        </ul>
-                    <hr>
-
-
-                </div>
-
-                <!-- Font Awesome for social media icons -->
-                <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-            </div>
-
-
-            <div class="col-md-8">
-
+           
 
 
                 <div class="edit-profile-container">
                     <h2 class="form-title">Add User</h2>
 
-                    <!-- Placeholder for current profile image -->
-                    <img src="https://img.icons8.com/avantgarde/100/test-account.png" alt="Profile Image" class="profile-image" />
+                    
                     <form method="post" asp-action="CreateUser" asp-controller="AdminUsers">
                         <div class="form-group">
                             <label asp-for="UserName">Username</label>
@@ -180,11 +129,9 @@
 
 
 
-            </div>
+           
 
 
-        </div>
-    </div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -1,0 +1,209 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+    <title>Fruitway Store - Admin</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="~/img/favicon.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Poppins:400,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="~/bootstrap/css/bootstrap.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="~/css/main.css">
+    <style>
+        body {
+            background-color: #f4f7fa; /* Light gray background for a softer look */
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .top-header-area {
+            background-color: #28a745; /* Use a secondary color for the header */
+            color: white;
+        }
+
+        .nav-link.active {
+            background-color: #218838; /* Darker shade for active links */
+            color: white;
+        }
+
+        .nav-link {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            .nav-link:hover {
+                background-color: #218838; /* Change on hover */
+                color: white;
+            }
+
+        .card {
+            margin-bottom: 20px; /* Maintain spacing for cards */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        .footer {
+            background-color: #28a745; /* Match footer with header */
+            color: white;
+            padding: 20px 0;
+        }
+
+            .footer a {
+                color: white;
+            }
+
+                .footer a:hover {
+                    text-decoration: underline;
+                }
+
+        .sidebar {
+            background-color: #ffffff; /* Sidebar with white background */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+        }
+
+        .nav-link {
+            color: #343a40; /* Dark gray for links */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header and Navigation Bar -->
+    <div class="top-header-area" id="sticker">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="main-menu-wrap">
+                        <nav class="main-menu">
+                            <ul class="list-inline">
+                                <li class="current-list-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+                                <li><a asp-action="About" asp-controller="Home">About</a></li>
+                                <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
+                                <li><a asp-action="Shop" asp-controller="Product">Shop</a></li>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <li><a asp-action="GeAllProducts" asp-controller="AdminProduct">Admin</a></li>
+                                }
+                                @if (!SignInManager.IsSignedIn(User))
+                                {
+                                    <li>
+                                        <a class="login-icon" asp-action="Login" asp-controller="Account" title="Login">
+                                            <i class="fas fa-sign-in-alt"></i> Login
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="register-icon" asp-action="Register" asp-controller="Account" title="Register">
+                                            <i class="fas fa-user-plus"></i> Register
+                                        </a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li>
+                                        <a asp-action="User" asp-controller="Users" title="User Profile">
+                                            <i class="fas fa-user"></i> Hello @User?.Identity?.Name
+                                        </a>
+                                        <ul class="sub-menu list-unstyled p-3 bg-dark rounded shadow">
+                                            <li class="mb-2">
+                                                <a class="btn btn-primary w-100 text-light" asp-action="User" asp-controller="Users">
+                                                    <i class="fas fa-user-circle me-2"></i> Profile
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="logout-icon btn btn-danger w-100" asp-action="Logout" asp-controller="Account">
+                                                    <i class="fas fa-sign-out-alt me-2"></i> Logout
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                }
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Layout with Sidebar and Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 sidebar">
+                <div class="d-flex flex-column flex-shrink-0 p-3" style="height: 100vh;">
+                    <a asp-action="GeAllProducts" asp-controller="AdminProduct" class="d-flex align-items-center mb-5 mb-md-0 me-md-auto text-decoration-none">
+                        <span class="fs-4 text-center">Admin Tools</span>
+                    </a>
+                    <hr>
+                    <!-- Navigation Links -->
+                    <ul class="nav nav-pills flex-column mb-auto my-5">
+                        <li class="nav-item">
+                            <a asp-action="GeAllProducts" asp-controller="AdminProduct" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "GeAllProducts" ? "active" : "")">
+                                <i class="fas fa-home me-2"></i> All Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-action="ADD" asp-controller="AdminProduct" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "ADD" ? "active" : "")">
+                                <i class="fas fa-plus me-2"></i> Add Product
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-action="AllUsers" asp-controller="AdminUsers" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "AllUsers" ? "active" : "")">
+                                <i class="fas fa-users me-2"></i> All Users
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-action="AddUser" asp-controller="AdminUsers" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "AddUser" ? "active" : "")">
+                                <i class="fas fa-user-plus me-2"></i> Add User
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="col-md-9">
+                @RenderBody()  <!-- This will render the specific page content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <p>
+                        Copyrights &copy; 2019 - <a href="#">Fruitway</a>, All Rights Reserved.<br>
+                        Powered By - <a href="https://www.linkedin.com/in/mostafa-aboelhassan/">Mostafa Mahmoud</a>
+                    </p>
+                </div>
+                <div class="col-lg-6 text-right col-md-12">
+                    <div class="social-icons">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/mostafa-aboelhassan/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+</html>

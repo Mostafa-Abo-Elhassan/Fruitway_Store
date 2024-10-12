@@ -13,14 +13,22 @@ namespace Fruitway_Store
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddSession();
             builder.Services.AddControllersWithViews();
 
+            //builder.Services.AddScoped<IshappingCart, ShoppingCartRepo>(s => ShoppingCartRepo.GetCart(s));
+            builder.Services.AddScoped<IshappingCart, ShoppingCartRepo>(ShoppingCartRepo.GetCart);
             builder.Services.AddDbContext<ApplicationDbcontext>(options =>
       options.UseSqlServer(builder.Configuration.GetConnectionString("Fruitway")));
             builder.Services.AddScoped<IProductRepo,ProductRepo>();
 			builder.Services.AddScoped<IAdminProduct, AdminProductRepo>();
             builder.Services.AddScoped<Iuser, UserRepo>();
+            //builder.Services.AddScoped<IshappingCart>(ShoppingCartRepo.GetCart());
+            
 
+            //builder.Services.AddScoped<IshappingCart,ShoppingCartRepo>(ShoppingCartRepo.GetCart());
+            builder.Services.AddSession();
+            builder.Services.AddHttpContextAccessor();
 
             builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 	 options.SignIn.RequireConfirmedAccount = true)
@@ -36,7 +44,7 @@ namespace Fruitway_Store
 			});
 
 			var app = builder.Build();
-
+            app.UseSession();
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
@@ -47,7 +55,7 @@ namespace Fruitway_Store
             app.UseRouting();
             app.UseAuthorization();
             app.UseAuthorization();
-
+            app.UseSession(); // ????? ??? Session
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");

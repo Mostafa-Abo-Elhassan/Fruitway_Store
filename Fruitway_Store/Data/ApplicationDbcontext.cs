@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 using System.Reflection.Emit;
+using Fruitway_Store.Repository.IRepo;
 
 namespace Fruitway_Store.Data
 {
@@ -17,29 +18,31 @@ namespace Fruitway_Store.Data
 		public DbSet<Product> Products { get; set; }
 
 
-		//protected override void OnModelCreating(ModelBuilder modelBuilder)
-		//{
-		//    base.OnModelCreating(modelBuilder);
+        public DbSet<ShappingCart> ShappingCarts { get; set; }
 
-		//    modelBuilder.Entity<Product>().HasData(
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    base.OnModelCreating(modelBuilder);
 
-		//      new Product { Id = 1, Name = "Lemon", Detail = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", Price = 85, IsTrandingProduct = true, ImageUrl = "" },
-		//      new Product { Id = 2, Name = "Berry", Detail = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", Price = 70, IsTrandingProduct = true, ImageUrl = "" },
-		//      new Product { Id = 3, Name = "Strawberry", Detail = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", Price = 45, IsTrandingProduct = true, ImageUrl = "" },
-		//      new Product { Id = 4, Name = "Strawberry", Detail = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", Price = 50, IsTrandingProduct = true, ImageUrl = "" },
-		//      new Product { Id = 5, Name = "Green Apple", Detail = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", Price = 60, IsTrandingProduct = true, ImageUrl = "" },
-		//      new Product { Id = 6, Name = "Avocado", Detail = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", Price = 100, IsTrandingProduct = true, ImageUrl = "" }
+        //    modelBuilder.Entity<Product>().HasData(
 
-
-
-
-		//        );
+        //      new Product { Id = 1, Name = "Lemon", Detail = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", Price = 85, IsTrandingProduct = true, ImageUrl = "" },
+        //      new Product { Id = 2, Name = "Berry", Detail = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", Price = 70, IsTrandingProduct = true, ImageUrl = "" },
+        //      new Product { Id = 3, Name = "Strawberry", Detail = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", Price = 45, IsTrandingProduct = true, ImageUrl = "" },
+        //      new Product { Id = 4, Name = "Strawberry", Detail = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", Price = 50, IsTrandingProduct = true, ImageUrl = "" },
+        //      new Product { Id = 5, Name = "Green Apple", Detail = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", Price = 60, IsTrandingProduct = true, ImageUrl = "" },
+        //      new Product { Id = 6, Name = "Avocado", Detail = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", Price = 100, IsTrandingProduct = true, ImageUrl = "" }
 
 
 
-		//}
 
-		protected override void OnModelCreating(ModelBuilder builder)
+        //        );
+
+
+
+        //}
+
+        protected override void OnModelCreating(ModelBuilder builder)
 		{
 			builder.Entity<Product>()
 				 .Property(p => p.Price)

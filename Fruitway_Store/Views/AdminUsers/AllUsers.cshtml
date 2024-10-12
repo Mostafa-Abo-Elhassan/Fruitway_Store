@@ -1,238 +1,76 @@
 ﻿@model USERS
 
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
 
-
-
-<div class="bg-dark" style=" background-color: #051224;">
+<div class="bg-dark" style="background-color: #051224;">
     <div class="container">
         <div class="row">
-            <div>
-                <div class="col-lg-8 offset-lg-2 text-center">
-                    <p class="text-dark"> </p>
-                    <h4 class="text-dark text-center my-4">j</h4>
-                    <br />
-
-                </div>
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <h4 class="text-dark text-center my-4">Admin Dashboard</h4>
             </div>
         </div>
     </div>
 </div>
 
-
-<div>
-    <div class class=" text-center">
-        <p class="text-dark text-center ">Admin </p>
-        <h1 class="text-dark text-center ">All Users</h1>
-
-    </div>
+<div class="text-center">
+    <p class="text-dark">Admin</p>
+    <h1 class="text-dark">All Users</h1>
 </div>
-<!-- Button to trigger the modal -->
 
+<div class="container py-5">
+    @if (Model != null)
+    {
+        <h3>@ViewBag.count user(s)</h3>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile - Fruitway Store</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: url('path/to/your/background-image.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        .edit-profile-container {
-            max-width: 600px;
-            margin: 100px auto;
-            padding: 30px;
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-title {
-            margin-bottom: 30px;
-            text-align: center;
-            font-size: 2rem;
-            color: #333;
-        }
-
-        .profile-image {
-            width: 150px; /* Adjust the size of the profile image */
-            height: auto;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn-primary {
-            background-color: #28a745; /* Customize your primary color */
-            border: none;
-        }
-
-            .btn-primary:hover {
-                background-color: #218838; /* Darker shade for hover effect */
-            }
-
-        .text-danger {
-            font-size: 0.9rem; /* Slightly smaller font for error messages */
-        }
-    </style>
-</head>
-
-<body>
-
-
-    <div class="container-fluid m-5">
-        <div class="row">
-            <div class="col-md-0">
-                <!-- Sidebar -->
-                <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 250px; height: 100vh;">
-                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-                        <span class="fs-4">  Admin Tools</span>
-                    </a>
-                    <hr>
-                    <!-- Navigation Links -->
-                    <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item">
-                            <a asp-action="GeAllProducts" asp-controller="AdminProduct" class="nav-link active" aria-current="page">
-                                <i class="fas fa-home me-2"></i>  All Products
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a asp-area="" asp-action="ADD" asp-controller="AdminProduct" class="nav-link">
-                                <i class="fas fa-user me-2"></i> Add Product
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a asp-action="AllUsers" asp-controller="AdminUsers" class="nav-link " aria-current="page">
-                                <i class="fas fa-home me-2"></i>  All Users
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a asp-action="AddUser" asp-controller="AdminUsers" class="nav-link " aria-current="page">
-                                <i class="fas fa-home me-2"></i>  Add User
-                            </a>
-                        </li>
-
-                    </ul>
-                    <hr>
-
-
-                </div>
-
-                <!-- Font Awesome for social media icons -->
-                <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-            </div>
-
-
-            <div class="col-md-8">
-
-                <div>
-                    @if (Model != null)
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    @if (User.IsInRole("Super_Admin"))
                     {
-                        <h3>  @ViewBag.count user</h3>
-
-
-
-                        <div class="container py-5">
-                            <table class="table">
-
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-
-                                        <th>User Name</th>
-
-                                        <th>Email</th>
-
-                                        <th>Role</th>
-
-                                        <th></th>
-
-                                        <th></th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    @foreach (var user in Model.Users)
-                                    {
-                                        <tr>
-                                            <td>@user.Id</td>
-
-                                            <td>@user.UserName</td>
-
-                                            <td>@user.Email</td>
-
-                                            <td>@user.RoleName</td>
-                                            @if (User.IsInRole("Super_Admin"))
-                                            {
-                                            <td>
-                                                <form method="post" asp-action="Edit"
-                                                      asp-controller="AdminUsers"
-                                                      asp-route-Id="@user.Id">
-                                                    <button class="btn btn-primary" type="submit">Edit</button>
-
-                                                </form>
-                                            </td>
-                                            <td>
-                                               
-                                                    <form method="post" asp-action="Delete"
-                                                    asp-controller="AdminUsers"
-                                                    asp-route-Id="@user.Id">
-                                                        <button class="btn btn-danger" type="submit">Delete</button>
-
-                                                    </form>
-                                              
-                                            </td>
-                                            }
-                                        </tr>
-                                    }
-
-
-
-                                </tbody>
-                            </table>
-
-                        </div>
-
-
-
-
-
-
-
-
+                        <th>Edit</th>
+                        <th>Delete</th>
                     }
-                    else
-                    {
-                        <p>NO Users Found!</p>
-                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model.Users)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.UserName</td>
+                        <td>@user.Email</td>
+                        <td>@user.RoleName</td>
+                        @if (User.IsInRole("Super_Admin"))
+                        {
+                            <td>
+                                <form method="post" asp-action="Edit" asp-controller="AdminUsers" asp-route-Id="@user.Id">
+                                    <button class="btn btn-primary" type="submit">Edit</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form method="post" asp-action="Delete" asp-controller="AdminUsers" asp-route-Id="@user.Id">
+                                    <button class="btn btn-danger" type="submit">Delete</button>
+                                </form>
+                            </td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Users Found!</p>
+    }
+</div>
 
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-</body>
-
-</html>
-
-
-
-
-
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>

@@ -4,6 +4,7 @@ using Fruitway_Store.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fruitway_Store.Migrations
 {
     [DbContext(typeof(ApplicationDbcontext))]
-    partial class ApplicationDbcontextModelSnapshot : ModelSnapshot
+    [Migration("20241007161140_carts")]
+    partial class carts
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,7 +56,7 @@ namespace Fruitway_Store.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Fruitway_Store.Models.Entities.ShappingCart", b =>
+            modelBuilder.Entity("Fruitway_Store.Models.Entities.shappingCart", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -67,7 +70,7 @@ namespace Fruitway_Store.Migrations
                     b.Property<int>("Qty")
                         .HasColumnType("int");
 
-                    b.Property<string>("ShoppingCartId")
+                    b.Property<string>("shappingcartId")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -107,21 +110,21 @@ namespace Fruitway_Store.Migrations
                         new
                         {
                             Id = "2a768bee-f40e-4183-9736-2c0cae0ba9f3",
-                            ConcurrencyStamp = "4a70624e-185f-4827-a60b-670f18d89fb8",
+                            ConcurrencyStamp = "64af2329-5ffb-4736-9d6b-baddad905af1",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "9b5649ea-6db6-482a-a83e-73633a72c2ce",
-                            ConcurrencyStamp = "a29fdaff-6c53-451c-a948-f79a8f861b1a",
+                            ConcurrencyStamp = "073ad221-3444-4f39-808c-3d233e0b04c2",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
                             Id = "1b892d2e-2158-4170-91ec-08839cd0f4d4",
-                            ConcurrencyStamp = "9082780b-8ddd-45b0-9caa-3ba459b02b55",
+                            ConcurrencyStamp = "e783f900-7134-44ac-93cc-fb5c69bae7d1",
                             Name = "Super_Admin",
                             NormalizedName = "SUPER_ADMIN"
                         });
@@ -221,15 +224,15 @@ namespace Fruitway_Store.Migrations
                         {
                             Id = "20F5B72B-5F5E-4D40-A45B-509A01FF187F",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "2cc77117-4ebd-41a8-b95e-010975180bae",
+                            ConcurrencyStamp = "29bcf245-786e-4307-ac5b-b7a73b0b2d0e",
                             Email = "superadmin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "SUPERADMIN@GMAIL.COM",
                             NormalizedUserName = "SUPERADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAENHVLSXsUf+UL+hQYvvBCdDcXnDHvHQsLXeU70pRfnyB1qwislLuw/rFnL/ktTAm/Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAENQHYXVZBQGIRPB2WHTPm4zE6ISbWl5+qkyGZHsA/IMLonZufuwz9gFWCm7mNaaEJg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1cbbf47e-3594-44e5-9299-42959ef5a2c5",
+                            SecurityStamp = "8746a318-b8e2-4e76-ba1e-46cf56cdc1c2",
                             TwoFactorEnabled = false,
                             UserName = "superadmin@gmail.com"
                         });
@@ -333,7 +336,7 @@ namespace Fruitway_Store.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Fruitway_Store.Models.Entities.ShappingCart", b =>
+            modelBuilder.Entity("Fruitway_Store.Models.Entities.shappingCart", b =>
                 {
                     b.HasOne("Fruitway_Store.Models.Entities.Product", "Product")
                         .WithMany()

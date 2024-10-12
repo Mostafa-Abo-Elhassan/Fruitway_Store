@@ -1,0 +1,97 @@
+﻿@model List<ShappingCart>
+
+
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Fresh and Organic</p>
+                    <h1>Cart</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb section -->
+<!-- cart -->
+
+<div class="cart-section mt-150 mb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="cart-table-wrap">
+                    <table class="cart-table">
+                        <thead class="cart-table-head">
+                            <tr class="table-head-row">
+                                <th class="product-remove"></th>
+                                <th class="product-image">Product Image</th>
+                                <th class="product-name">Name</th>
+                                <th class="product-price">Price</th>
+                                <th class="product-quantity">Quantity</th>
+                                <th class="product-total">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr class="table-body-row">
+                                    <td class="product-remove">
+                                        <form asp-action="RemoveFromCart" method="post">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                            <button type="submit">Remove</button>
+                                        </form>
+                                    </td>
+                                    <td class="product-image">
+                                        <img src="@item.Product.ImageUrl" alt="Product Image" />
+                                    </td>
+                                    <td class="product-name">@item.Product.Name</td>
+                                    <td class="product-price">@item.Product.Price.ToString("c")</td>
+                                    <td class="product-quantity">
+                                        <form asp-action="UpdateCart" method="post">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                            <input type="number" name="qty" value="@item.Qty" min="1" />
+                                            <button type="submit">Update</button>
+                                        </form>
+                                    </td>
+                                    <td class="product-total">@((item.Qty * item.Product.Price).ToString("c"))</td>
+                                </tr>
+                            }
+
+                           
+                        </tbody>
+                    </table>
+                    <form asp-action="ClearCart" method="post">
+                        <button type="submit">Clear Cart</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="total-section">
+                    <table class="total-table">
+                        <thead class="total-table-head">
+                            <tr class="table-total-row">
+                                <th>Total</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                            <tr class="total-data">
+                                <td><strong>Total: </strong></td>
+                                <td>@Model.Sum(item => item.Qty * item.Product.Price)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="cart-buttons">
+                        <a href="cart.html" class="boxed-btn">Update Cart</a>
+                        <a href="checkout.html" class="boxed-btn black">Check Out</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

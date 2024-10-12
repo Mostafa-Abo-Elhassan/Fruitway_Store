@@ -20,12 +20,18 @@ namespace Fruitway_Store.Controllers
         [HttpGet]
         public IActionResult User()
         {
-         
-                return View();
-           
+            var username = HttpContext.Session.GetString("Username");
+
+            //var pass= HttpContext.Session.GetString("Pass");
+            //ViewBag.pass = pass;
+           ViewBag.Username = username;
+
+
+            return View();
+
         }
         [HttpPost]
-        public  async Task <IActionResult> user(EditUserVM userVM)
+        public async Task<IActionResult> user(EditUserVM userVM)
         {
             var user = await userManager.FindByNameAsync(userVM.UserName);
             if (user != null)
@@ -38,7 +44,7 @@ namespace Fruitway_Store.Controllers
 
                     // Hash and assign password
                     var passwordHasher = new PasswordHasher<IdentityUser>();
-                    user.PasswordHash = passwordHasher.HashPassword(user, userVM.NEWPassword);                 
+                    user.PasswordHash = passwordHasher.HashPassword(user, userVM.NEWPassword);
                     await userManager.UpdateAsync(user);
                     await signInManager.SignInAsync(user, false);
                     return RedirectToAction("User", user);
@@ -52,6 +58,11 @@ namespace Fruitway_Store.Controllers
         [HttpGet]
         public IActionResult DeleteAccount()
         {
+            var username = HttpContext.Session.GetString("Username");
+
+            //var pass= HttpContext.Session.GetString("Pass");
+            //ViewBag.pass = pass;
+            ViewBag.Username = username;
 
             return View();
 
@@ -59,7 +70,7 @@ namespace Fruitway_Store.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> DeleteAccount (EditUserVM userVM)
+        public async Task<IActionResult> DeleteAccount(EditUserVM userVM)
         {
             var user = await userManager.FindByNameAsync(userVM.UserName);
 

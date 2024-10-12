@@ -1,21 +1,19 @@
-﻿@model        Fruitway_Store.Models.ViewModels.EditUserVM
-<!-- breadcrumb-section -->
+﻿@model Fruitway_Store.Models.ViewModels.EditUserVM
 
-<div class="bg-dark" style=" background-color: #051224;">
+<!-- breadcrumb-section -->
+<div class="bg-dark" style="background-color: #051224;">
     <div class="container">
         <div class="row">
-            <div>
-                <div class="col-lg-8 offset-lg-2 text-center">
-                    <p class="text-dark"> </p>
-                    <h4 class="text-dark text-center my-4">j</h4>
-                    <br />
-
-                </div>
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <p class="text-dark">Welcome to Your Profile</p>
+                <h4 class="text-dark text-center my-4">Edit Your Information Below</h4>
+                <br />
             </div>
         </div>
     </div>
 </div>
 <!-- end breadcrumb section -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,41 +23,45 @@
     <title>Edit Profile - Fruitway Store</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
             background: url('path/to/your/background-image.jpg') no-repeat center center fixed;
             background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
         }
 
         .edit-profile-container {
             max-width: 600px;
-            margin: 100px auto;
+            margin: 50px auto;
             padding: 30px;
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque */
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
         }
 
         .form-title {
             margin-bottom: 30px;
             text-align: center;
-            font-size: 2rem;
-            color: #333;
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: #28a745; /* Primary color */
         }
 
         .profile-image {
             width: 150px; /* Adjust the size of the profile image */
             height: auto;
             border-radius: 50%;
-            margin-bottom: 20px;
+            margin: 20px auto;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         .btn-primary {
             background-color: #28a745; /* Customize your primary color */
             border: none;
+            transition: background-color 0.3s ease;
         }
 
             .btn-primary:hover {
@@ -69,114 +71,93 @@
         .text-danger {
             font-size: 0.9rem; /* Slightly smaller font for error messages */
         }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #f8f9fa; /* Light background for sidebar */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+            .sidebar .nav-link {
+                color: #333;
+                transition: background-color 0.3s, color 0.3s;
+            }
+
+                .sidebar .nav-link:hover {
+                    background-color: #e2e6ea;
+                    color: #28a745;
+                }
     </style>
 </head>
 
 <body>
 
-    <div>
-        <div class class=" text-center">
-            <p class="text-dark text-center "> </p>
-            <h1 class="text-dark text-center ">Edit Profile</h1>
-
-        </div>
-    </div>
+    
 
     <div class="container-fluid m-5">
         <div class="row">
-            <div class="col-md-0">
+            <div class="col-md-3">
                 <!-- Sidebar -->
-                <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 250px; height: 100vh;">
-                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-                        <span class="fs-4">  Profile Sittings</span>
-                    </a>
+                <div class="sidebar">
+                    
                     <hr>
                     <!-- Navigation Links -->
                     <ul class="nav nav-pills flex-column mb-auto">
                         <li class="nav-item">
                             <a asp-action="user" asp-controller="Users" class="nav-link active" aria-current="page">
-                                <i class="fas fa-home me-2"></i>  Edit Profile
+                                <i class="fas fa-user-edit me-2"></i> Edit Profile
                             </a>
                         </li>
                         <li class="nav-item">
                             <a asp-area="" asp-action="DeleteAccount" asp-controller="Users" class="nav-link">
-                                <i class="fas fa-user me-2"></i>  Delete Your Account
+                                <i class="fas fa-user-slash me-2"></i> Delete Your Account
                             </a>
                         </li>
-                       
                     </ul>
                     <hr>
-                   
-                    
                 </div>
 
                 <!-- Font Awesome for social media icons -->
                 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
             </div>
 
-           
-            <div class="col-md-8">
-
-
-
-
+            <div class="col-md-8 m-0">
                 <div class="edit-profile-container">
                     <h2 class="form-title">Edit Your Profile</h2>
 
                     <!-- Placeholder for current profile image -->
-                    <img src="https://img.icons8.com/avantgarde/100/test-account.png" alt="Profile Image" class="profile-image" />
-
-                    <form method="post" asp-action="user" asp-controller="Users" enctype="multipart/form-data">
+                   
+                    <form class="m-0" method="post" asp-action="user" asp-controller="Users" enctype="multipart/form-data">
                         <div class="mb-3">
-
-                            <label class="form-label">Old Username</label>
-                            <input asp-for="UserName" class="form-control" type="text" placeholder="Enter your username" required>
+                            <label class="form-label"></label>
+                            <input class="form-control" type="hidden" name="UserName" value="@ViewBag.Username" readonly required>
 
                         </div>
+                     
+                        
                         <div class="mb-3">
-
                             <label class="form-label">New Username</label>
-                            <input asp-for="NEWUserName" class="form-control" type="text" placeholder="Enter your username" required>
+                            <input asp-for="NEWUserName" class="form-control" type="text" placeholder="Enter your new username" required>
+                        </div>
 
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Old Email</label>
-                            <input asp-for="Email" class="form-control" type="email" placeholder="Enter your email" required>
-                            <div class="text-danger" id="emailError"></div> <!-- Error message placeholder -->
-                        </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">New Email</label>
-                            <input asp-for="NEWEmail" class="form-control" type="email" placeholder="Enter your email" required>
+                            <input asp-for="NEWEmail" class="form-control" type="email" placeholder="Enter your new email" required>
                             <div class="text-danger" id="emailError"></div> <!-- Error message placeholder -->
                         </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Old Password</label>
-                            <input asp-for="Password" class="form-control" type="password" placeholder="Create a password" required>
-                            <div class="text-danger" id="passwordError"></div> <!-- Error message placeholder -->
-                        </div>
+                     
                         <div class="mb-3">
                             <label for="password" class="form-label">New Password</label>
-                            <input asp-for="NEWPassword" class="form-control" type="password" placeholder="Create a password" required>
+                            <input asp-for="NEWPassword" class="form-control" type="password" placeholder="Enter your new password" required>
                             <div class="text-danger" id="passwordError"></div> <!-- Error message placeholder -->
                         </div>
 
-
                         <button type="submit" class="btn btn-primary w-100">Save Changes</button>
-
                     </form>
-
-
-
-                 
                 </div>
-
-
-
-
             </div>
-
-
         </div>
     </div>
 
