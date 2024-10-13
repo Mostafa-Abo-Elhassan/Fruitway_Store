@@ -128,7 +128,11 @@
 						</div>
 						<h3>@item.Name</h3>
 						<p class="product-price"><span>Per Kg</span> @item.Price.ToString("c") </p>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						<form asp-action="AddToshoppingCart" asp-controller="ShappingCart" asp-route-pId="@item.Id" method="post" class="d-inline">
+							<button type="submit" class="cart-btn">
+								<i class="fas fa-shopping-cart"></i> Add to Cart
+							</button>
+						</form>
 					</div>
 				</div>
 			

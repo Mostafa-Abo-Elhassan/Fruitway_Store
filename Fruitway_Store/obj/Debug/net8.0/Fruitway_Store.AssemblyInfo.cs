@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fruitway_Store")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c037b8dcb5ecfb3a3542d7e7b8b52713a2b22fb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc7df7af2b8d343d208d6fad2c26a6738a71fb04")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fruitway_Store")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fruitway_Store")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

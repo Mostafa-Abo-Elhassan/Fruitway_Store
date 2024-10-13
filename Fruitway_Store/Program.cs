@@ -19,12 +19,15 @@ namespace Fruitway_Store
             //builder.Services.AddScoped<IshappingCart, ShoppingCartRepo>(s => ShoppingCartRepo.GetCart(s));
             builder.Services.AddScoped<IshappingCart, ShoppingCartRepo>(ShoppingCartRepo.GetCart);
             builder.Services.AddDbContext<ApplicationDbcontext>(options =>
-      options.UseSqlServer(builder.Configuration.GetConnectionString("Fruitway")));
+            options.UseSqlServer(builder.Configuration.GetConnectionString("Fruitway")));
             builder.Services.AddScoped<IProductRepo,ProductRepo>();
 			builder.Services.AddScoped<IAdminProduct, AdminProductRepo>();
-            builder.Services.AddScoped<Iuser, UserRepo>();
+            builder.Services.AddScoped< Iuser, UserRepo>();
+            builder.Services.AddScoped<IOrderRepo, OrderRepo>();
+
+
             //builder.Services.AddScoped<IshappingCart>(ShoppingCartRepo.GetCart());
-            
+
 
             //builder.Services.AddScoped<IshappingCart,ShoppingCartRepo>(ShoppingCartRepo.GetCart());
             builder.Services.AddSession();

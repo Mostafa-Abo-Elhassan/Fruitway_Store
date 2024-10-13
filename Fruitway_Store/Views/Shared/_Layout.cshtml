@@ -1,7 +1,9 @@
-﻿
+﻿@inject IHttpContextAccessor IHttpContextAccessor
 @using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> SignInManager;
-
+@{
+    var countcart = IHttpContextAccessor?.HttpContext?.Session.GetInt32("cartcount") ?? 0;
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -144,25 +146,22 @@
 
                                 }
 
-
-
-
-
-
-
-
                                 <li>
                                     <div class="header-icons">
-                                        <a class="shopping-cart" asp-controller="ShappingCart" asp-action="Index"><i class="fas fa-shopping-cart"></i></a>
+                                        <!-- Shopping Cart with Counter -->
+                                        <a class="shopping-cart" asp-controller="ShappingCart" asp-action="Index" style="position: relative;">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <!-- Cart Counter Badge -->
+                                            <span class="badge rounded-pill bg-danger" style="position: absolute; top: -10px; right: -10px;">
+                                                (  @countcart  ) <!-- Replace with dynamic cart count -->
+                                            </span>
+                                        </a>
+
+                                        <!-- Search Icon (hidden on mobile) -->
                                         <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
-
-
-
-
-
                                     </div>
-
                                 </li>
+
 
                             </ul>
 

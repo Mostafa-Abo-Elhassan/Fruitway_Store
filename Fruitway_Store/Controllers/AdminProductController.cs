@@ -104,7 +104,7 @@ namespace Fruitway_Store.Controllers
             {
                 dbcontext.Products.Remove(existing); // حذف المنتج الموجود
                 dbcontext.SaveChanges(); // حفظ التغييرات
-                return RedirectToAction("GeAllProducts"); // إعادة التوجيه بعد الحذف
+                return RedirectToAction("GeAllProducts", "AdminProduct"); // إعادة التوجيه بعد الحذف
 
             }
             return RedirectToAction("GeAllProducts");

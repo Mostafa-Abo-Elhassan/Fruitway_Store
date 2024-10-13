@@ -1,0 +1,95 @@
+﻿@model Order
+
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 text-center">
+				<div class="breadcrumb-text">
+					<p>Fresh and Organic</p>
+					<h1>Check Out Product</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end breadcrumb section -->
+<!-- check out section -->
+<div class="checkout-section mt-150 mb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="checkout-accordion-wrap">
+                    <div class="accordion" id="accordionExample">
+                        <!-- Billing Address Accordion -->
+                        <div class="card single-accordion">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Billing Address
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="billing-address-form">
+                                        <form asp-action="checkout" asp-controller="Order">
+                                            <p><input type="text" asp-for="Name" placeholder="Name" class="form-control"></p>
+                                            <p><input type="email" asp-for="Email" placeholder="Email" class="form-control"></p>
+                                            <p><input type="text" asp-for="Address" placeholder="Address" class="form-control"></p>
+                                            <p><input type="tel" asp-for="Phone" placeholder="Phone" class="form-control"></p>
+                                            <button type="submit" class="btn btn-primary mt-3">Place Order</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                    </div> <!-- end of accordion -->
+                </div> <!-- end of checkout-accordion-wrap -->
+            </div> <!-- end of col-lg-8 -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of checkout-section -->
+<!-- end check out section -->
+@* <div class="col-lg-4">
+				<div class="order-details-wrap">
+					@if (Model.OrderDetails != null && Model.OrderDetails.Any())
+					{
+						<table class="order-details">
+							<thead>
+								<tr>
+									<th>Your order Details</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody class="order-details-body">
+								@foreach (var item in Model.OrderDetails)
+								{
+									@if (item.product != null)
+									{
+										<tr>
+											<td>@item.product.Name</td>
+											<td>@item.product.Price.ToString("C")</td> <!-- Format price as currency -->
+										</tr>
+									}
+								}
+							</tbody>
+							<tbody class="checkout-details">
+								<tr>
+									<td>Total</td>
+									<td>@Model.OrderDetails.Sum(i => i.Price).ToString("C")</td> <!-- Total price of the order -->
+								</tr>
+							</tbody>
+						</table>
+					}
+					else
+					{
+						<p>No order details available.</p>
+					}
+
+					<a href="#" class="boxed-btn">Place Order</a>
+				</div>
+			</div> *@

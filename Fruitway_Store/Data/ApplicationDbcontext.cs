@@ -8,18 +8,20 @@ using Fruitway_Store.Repository.IRepo;
 
 namespace Fruitway_Store.Data
 {
-	public class ApplicationDbcontext : IdentityDbContext<IdentityUser>
-	{
-		public ApplicationDbcontext(DbContextOptions<ApplicationDbcontext> options) : base(options) { }
+    public class ApplicationDbcontext : IdentityDbContext<IdentityUser>
+    {
+        public ApplicationDbcontext(DbContextOptions<ApplicationDbcontext> options) : base(options) { }
 
 
 
 
-		public DbSet<Product> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
 
 
         public DbSet<ShappingCart> ShappingCarts { get; set; }
 
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetails> orderDetails { get; set; }
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
         //    base.OnModelCreating(modelBuilder);
@@ -43,90 +45,91 @@ namespace Fruitway_Store.Data
         //}
 
         protected override void OnModelCreating(ModelBuilder builder)
-		{
-			builder.Entity<Product>()
-				 .Property(p => p.Price)
-				 .HasColumnType("decimal(18,2)");
+        {
+            builder.Entity<Product>()
+                 .Property(p => p.Price)
+                 .HasColumnType("decimal(18,2)");
 
-			builder.Entity<Product>()
-				.Property(p => p.Name)
-				.HasMaxLength(200);
+            builder.Entity<Product>()
+                .Property(p => p.Name)
+                .HasMaxLength(200);
 
-			builder.Entity<Product>()
-				.Property(p => p.Detail)
-				.HasMaxLength(1000);
+            builder.Entity<Product>()
+                .Property(p => p.Detail)
+                .HasMaxLength(1000);
 
-			builder.Entity<Product>()
-				.Property(p => p.ImageUrl)
-				.HasMaxLength(500);
+            builder.Entity<Product>()
+                .Property(p => p.ImageUrl)
+                .HasMaxLength(500);
+            //builder.Entity<OrderDetails>()
+            //    .HasNoKey(); 
+                    // Seed Roles
+            builder.Entity<IdentityRole>().HasData(
+                new IdentityRole()
+                {
+                    Id = "2a768bee-f40e-4183-9736-2c0cae0ba9f3", // Admin
+                    Name = "Admin",
+                    NormalizedName = "ADMIN",
+                    ConcurrencyStamp = Guid.NewGuid().ToString(),
+                },
+                new IdentityRole()
+                {
+                    Id = "9b5649ea-6db6-482a-a83e-73633a72c2ce", // User
+                    Name = "User",
+                    NormalizedName = "USER",
+                    ConcurrencyStamp = Guid.NewGuid().ToString(),
+                },
+                new IdentityRole()
+                {
+                    Id = "1b892d2e-2158-4170-91ec-08839cd0f4d4", // Super_Admin
+                    Name = "Super_Admin",
+                    NormalizedName = "SUPER_ADMIN",
+                    ConcurrencyStamp = Guid.NewGuid().ToString(),
+                }
+            );
 
-			// Seed Roles
-			builder.Entity<IdentityRole>().HasData(
-				new IdentityRole()
-				{
-					Id = "2a768bee-f40e-4183-9736-2c0cae0ba9f3", // Admin
-					Name = "Admin",
-					NormalizedName = "ADMIN",
-					ConcurrencyStamp = Guid.NewGuid().ToString(),
-				},
-				new IdentityRole()
-				{
-					Id = "9b5649ea-6db6-482a-a83e-73633a72c2ce", // User
-					Name = "User",
-					NormalizedName = "USER",
-					ConcurrencyStamp = Guid.NewGuid().ToString(),
-				},
-				new IdentityRole()
-				{
-					Id = "1b892d2e-2158-4170-91ec-08839cd0f4d4", // Super_Admin
-					Name = "Super_Admin",
-					NormalizedName = "SUPER_ADMIN",
-					ConcurrencyStamp = Guid.NewGuid().ToString(),
-				}
-			);
+            // Seed SuperAdmin User
+            var superAdmin = new IdentityUser
+            {
+                Id = "20F5B72B-5F5E-4D40-A45B-509A01FF187F", // SuperAdmin user ID
+                UserName = "superadmin@gmail.com",
+                NormalizedUserName = "SUPERADMIN@GMAIL.COM",
+                Email = "superadmin@gmail.com",
+                NormalizedEmail = "SUPERADMIN@GMAIL.COM",
+                EmailConfirmed = true
+            };
 
-			// Seed SuperAdmin User
-			var superAdmin = new IdentityUser
-			{
-				Id = "20F5B72B-5F5E-4D40-A45B-509A01FF187F", // SuperAdmin user ID
-				UserName = "superadmin@gmail.com",
-				NormalizedUserName = "SUPERADMIN@GMAIL.COM",
-				Email = "superadmin@gmail.com",
-				NormalizedEmail = "SUPERADMIN@GMAIL.COM",
-				EmailConfirmed = true
-			};
+            // Hash and assign password
+            var passwordHasher = new PasswordHasher<IdentityUser>();
+            superAdmin.PasswordHash = passwordHasher.HashPassword(superAdmin, "superadmin@gmail.com");
 
-			// Hash and assign password
-			var passwordHasher = new PasswordHasher<IdentityUser>();
-			superAdmin.PasswordHash = passwordHasher.HashPassword(superAdmin, "superadmin@gmail.com");
+            // Add SuperAdmin user to IdentityUser entity
+            builder.Entity<IdentityUser>().HasData(superAdmin);
 
-			// Add SuperAdmin user to IdentityUser entity
-			builder.Entity<IdentityUser>().HasData(superAdmin);
+            // Seed Roles for SuperAdmin User
+            builder.Entity<IdentityUserRole<string>>().HasData(
+                new IdentityUserRole<string>
+                {
+                    UserId = "20F5B72B-5F5E-4D40-A45B-509A01FF187F", // SuperAdmin user ID
+                    RoleId = "1b892d2e-2158-4170-91ec-08839cd0f4d4"  // Super_Admin role ID
+                },
+                new IdentityUserRole<string>
+                {
+                    UserId = "20F5B72B-5F5E-4D40-A45B-509A01FF187F", // SuperAdmin user ID
+                    RoleId = "2a768bee-f40e-4183-9736-2c0cae0ba9f3"  // Admin role ID
+                },
+                new IdentityUserRole<string>
+                {
+                    UserId = "20F5B72B-5F5E-4D40-A45B-509A01FF187F", // SuperAdmin user ID
+                    RoleId = "9b5649ea-6db6-482a-a83e-73633a72c2ce"  // User role ID
+                }
+            );
 
-			// Seed Roles for SuperAdmin User
-			builder.Entity<IdentityUserRole<string>>().HasData(
-				new IdentityUserRole<string>
-				{
-					UserId = "20F5B72B-5F5E-4D40-A45B-509A01FF187F", // SuperAdmin user ID
-					RoleId = "1b892d2e-2158-4170-91ec-08839cd0f4d4"  // Super_Admin role ID
-				},
-				new IdentityUserRole<string>
-				{
-					UserId = "20F5B72B-5F5E-4D40-A45B-509A01FF187F", // SuperAdmin user ID
-					RoleId = "2a768bee-f40e-4183-9736-2c0cae0ba9f3"  // Admin role ID
-				},
-				new IdentityUserRole<string>
-				{
-					UserId = "20F5B72B-5F5E-4D40-A45B-509A01FF187F", // SuperAdmin user ID
-					RoleId = "9b5649ea-6db6-482a-a83e-73633a72c2ce"  // User role ID
-				}
-			);
-
-			base.OnModelCreating(builder);
-		}
+            base.OnModelCreating(builder);
+        }
 
 
-	}
+    }
 }
 
 
@@ -153,5 +156,5 @@ namespace Fruitway_Store.Data
 
 
 
-    
+
 
